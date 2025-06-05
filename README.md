@@ -12,11 +12,6 @@ A simple interactive Drum Kit web app. Click the buttons or press the correspond
 - Play drum sounds with mouse clicks or keyboard keys.
 - Responsive and easy-to-use interface.
 
-## Credits
-
-- Made with ❤️ in Nigeria.
-- Sounds from [your sound source, if applicable].
-
 ## Project Structure
 
 - `index.html` — Main HTML file
