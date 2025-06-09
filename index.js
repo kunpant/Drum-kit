@@ -10,11 +10,13 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
   function handleClick() {
     var buttonInnerHTML = this.innerHTML; // Get the letter on the button
     makeSound(buttonInnerHTML); // Play the corresponding sound
+    buttonAnimation(buttonInnerHTML);
   }
 
   // Add keydown event listener to the whole document (for keyboard press)
   document.addEventListener("keydown", function (event) {
     makeSound(event.key); // Play sound based on key pressed
+    buttonAnimation(event.key);
   });
 
   // Function to play sound based on key/button pressed
@@ -52,6 +54,16 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
         break;
     }
   }
+}
+
+function buttonAnimation(currentKey) {
+  var activeButton = document.querySelector("." + currentKey);
+
+  activeButton.classList.add("pressed");
+
+  setTimeout(function () {
+    activeButton.classList.remove("pressed");
+  }, 100);
 }
 
 // this.style.color = "#fff"; // Example: changes button color to white when clicked
